@@ -152,9 +152,12 @@ section {
 }
 
 /* home ------------------------------------------------------------------------------> */
+.home {
+  padding-top: 12rem !important;
+}
 .home .hero {
   background: url(../assets/images/bg-hero.png) no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 

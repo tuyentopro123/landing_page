@@ -2,11 +2,19 @@
   .container {
     max-width: 1500px !important;
   }
+
+  .text-header-xl-1 {
+    font-size: 7.2rem;
+  }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 1300px;
+  }
+
+  .text-header-xl-1 {
+    font-size: 6.2rem;
   }
 }
 
