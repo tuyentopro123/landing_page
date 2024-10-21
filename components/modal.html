@@ -1,0 +1,204 @@
+<!-- Modal ------------------------------------------------------------------------------>
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div
+      id="modal-form"
+      class="modal-form modal-content d-flex position-relative"
+    >
+      <button type="button" class="btn-close" aria-label="Close">
+        <i class="bi bi-x"></i>
+      </button>
+      <div class="base-form row d-flex">
+        <div
+          class="modal-info col-12 col-md-4 d-flex flex-column justify-content-center"
+        >
+          <div class="modal-container">
+            <div
+              class="info-title d-flex justify-content-between align-items-center mb-5"
+            >
+              <h1
+                class="title-color text-size-1 text-header-md-4 text-left w-75"
+              >
+                Đội ngũ <span class="purple-light">WisPay</span> luôn sẵn sàng
+                giúp đỡ!
+              </h1>
+            </div>
+            <div
+              class="info-contact text-size-4 text-size-md-3 title-color text-left"
+            >
+              <div>
+                <img src="assets/icon/contact-ic.svg" alt="" />
+                <div class="title-color mt-4">
+                  <p>Hotline</p>
+                  <p class="title-color text-size-5">034 806 7138</p>
+                  <p class="text-color text-size-5">
+                    Hoạt động từ Thứ 2 - Chủ nhật | 8:00 - 20:00
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img src="assets/icon/email-ic.svg" alt="" />
+                <div class="title-color mt-4">
+                  <p>Email</p>
+                  <p class="title-color text-size-5">business@wispay.io</p>
+                  <p class="text-color text-size-5">
+                    Hoạt động từ 8:00 - 22:00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="modal-header d-flex flex-column justify-content-start">
+            <p class="text-size-4 text-size-md-3 second-color text-uppercase">
+              Liên hệ
+            </p>
+            <h1
+              class="modal-title text-header-5 text-header-md-3"
+              id="exampleModalLongTitle"
+            >
+              Chúng ta hãy cùng nói chuyện nhé!
+            </h1>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group form-private">
+                <div class="form-input">
+                  <div id="custom-input-name">
+                    <input
+                      type="text"
+                      placeholder="Ví dụ: Nguyễn Văn A"
+                      id="name"
+                      required
+                    />
+                    <label for="name"
+                      ><span class="suffix">Nhập </span>Họ tên<span
+                        class="required"
+                        >*</span
+                      ></label
+                    >
+                  </div>
+                </div>
+                <div class="form-input">
+                  <div id="custom-input-email">
+                    <input
+                      type="email"
+                      placeholder="Ví dụ: abc@gmail.com"
+                      id="email"
+                      required
+                    />
+                    <label for="email"
+                      ><span class="suffix">Nhập </span>Email<span
+                        class="required"
+                        >*</span
+                      ></label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-input">
+                  <div id="custom-input-number">
+                    <input type="number" placeholder="" id="number" required />
+                    <label for="number"
+                      ><span class="suffix">Nhập </span>số điện thoại<span
+                        class="required"
+                        >*</span
+                      ></label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-input">
+                  <div id="custom-input-business">
+                    <input type="text" placeholder="" id="business" required />
+                    <label for="business"
+                      ><span class="suffix">Nhập </span>tên doanh nghiệp/cửa
+                      hàng<span class="required">*</span></label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div
+                  id="select-input"
+                  class="form-input select-input position-relative"
+                >
+                  <div id="custom-input-request">
+                    <input type="text" placeholder="" id="request" required />
+                    <label for="name"
+                      >Chọn yêu cầu của bạn<span class="required"
+                        >*</span
+                      ></label
+                    >
+                  </div>
+                  <div class="select-dropdown position-absolute">
+                    <ul>
+                      <li>Hỗ trợ ký thuật</li>
+                      <li>Tư vấn sản phẩm</li>
+                      <li>Phản hồi và góp ý</li>
+                      <li>Khác</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-input">
+                  <textarea
+                    placeholder="Để lại cho chúng tôi lời nhắn"
+                    id="description"
+                    name=""
+                    id=""
+                  ></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Hủy
+            </button>
+            <button type="button" id="submit-form-btn" class="btn btn-primary">
+              Gửi
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- msg success -->
+      <div
+        class="msg-success modal-body d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="text-center">
+          <h1
+            class="text-header-5 text-header-md-2 msg-1 font-weight-bold mb-5"
+          >
+            Cảm ơn bạn đã liên hệ
+          </h1>
+          <p class="text-size-4 text-size-md-2 mb-5 msg-2">
+            Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên hệ bạn trong thời
+            gian sớm nhất.
+          </p>
+          <div class="w-100 d-flex justify-content-center">
+            <button type="button" class="btn back-home-btn">
+              <p>Quay lại trang chủ</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

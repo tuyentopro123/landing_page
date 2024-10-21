@@ -84,13 +84,15 @@ section {
 }
 
 .header-mobile nav {
+  transform: translateX(-100%);
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .header.active .header-mobile nav {
+  transform: translateX(0);
   opacity: 1;
   max-height: 50rem;
 }
@@ -153,7 +155,7 @@ section {
 
 /* home ------------------------------------------------------------------------------> */
 .home {
-  padding-top: 12rem !important;
+  padding-top: 12rem;
 }
 .home .hero {
   background: url(../assets/images/bg-hero.png) no-repeat;
@@ -326,6 +328,46 @@ section {
 
 .service-thumbnail img {
   margin-top: 8rem;
+}
+
+.tag-arrow {
+  position: relative;
+}
+
+.tag-arrow::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  transform: translateY(0);
+  left: -5rem;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-right: transparent;
+  width: 5rem;
+  height: 10rem;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  background-color: transparent;
+}
+
+.tag-arrow.below::before {
+  bottom: -130%;
+}
+
+.tag-arrow.below::after {
+  bottom: -160%;
+}
+
+.tag-arrow::after {
+  content: "";
+  position: absolute;
+  bottom: -130%;
+  left: -2.5rem;
+  transform: translate(50%, -50%);
+  width: 0;
+  height: 0;
+  border-left: 1.8rem solid rgb(199 148 225);
+  border-bottom: 1rem solid transparent;
+  border-top: 1rem solid transparent;
 }
 
 /* feedback ---------------------------------------------------------------------------------------> */

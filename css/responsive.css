@@ -104,7 +104,7 @@
 
   /* home --------------------------------------------------------------------------------------> */
   .home {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
 
   /* about -------------------------------------------------------------------------------------> */
@@ -145,6 +145,28 @@
 
   .service-thumbnail img {
     margin-top: 2rem;
+  }
+
+  .tag-arrow::before {
+    bottom: -130%;
+    left: -2.5rem;
+    width: 2.5rem;
+  }
+
+  .tag-arrow::after {
+    bottom: -150%;
+    left: -1.4rem;
+    border-left: 0.9rem solid rgb(199 148 225);
+    border-bottom: 0.5rem solid transparent;
+    border-top: 0.5rem solid transparent;
+  }
+
+  .tag-arrow.below::before {
+    bottom: -160%;
+  }
+
+  .tag-arrow.below::after {
+    bottom: -180%;
   }
 
   /* feedback ------------------------------------------------------------------------------------------------> */

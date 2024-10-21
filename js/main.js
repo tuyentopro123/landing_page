@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  // Load các thành phần
+  $("#modal-contact").load("components/modal.html");
+  $("#header-section").load("components/header.html", function () {
+    updateFirstLanguage();
+  });
+  $("#home").load("components/home.html");
+  $("#about").load("components/about.html");
+  $("#process").load("components/process.html");
+  $("#service").load("components/service.html");
+  $("#feedback").load("components/feedback.html");
+  $("#question").load("components/question.html");
+
+  $("#footer-section").load("components/footer.html");
+
   // scroll header ----------------------------------------------------------------------------------->
   $(window).on("scroll", function () {
     if ($(window).width() >= 768 && $(window).scrollTop() > 80) {
@@ -9,7 +23,7 @@ $(document).ready(function () {
   });
 
   // nav button mobile ----------------------------------------------------------------------------------->
-  $("#list-mobile").on("click", function () {
+  $(document).on("click", "#list-mobile", function () {
     var $header = $(".header");
     var $closeIcon = $("#list-mobile").find("i.bi-x");
     var $listIcon = $("#list-mobile").find("i.bi-list");
@@ -26,21 +40,24 @@ $(document).ready(function () {
   });
 
   // nav language mobile ----------------------------------------------------------------------------------->
-  var firstLanguage = $(".language-dropdown li").first().text();
-  $("#language-mobile").find("p").text(firstLanguage);
+  // Hàm cập nhật ngôn ngữ đầu tiên
+  function updateFirstLanguage() {
+    var firstLanguage = $(".language-dropdown li").first().text();
+    $("#language-mobile").find("p").text(firstLanguage);
+  }
 
-  $("#language-mobile").on("click", function () {
+  $(document).on("click", "#language-mobile", function () {
     $(this).toggleClass("active");
   });
 
-  $(".language-dropdown li").on("click", function (e) {
+  $(document).on("click", ".language-dropdown li", function (e) {
     var selectedLanguage = $(this).text();
     $("#language-mobile").find("p").text(selectedLanguage);
     $(".language-dropdown").hide();
   });
 
   // question ----------------------------------------------------------------------------------->
-  $(".question-card").on("click", function () {
+  $(document).on("click", ".question-card", function () {
     var $paragraph = $(this).find("p");
     var $plusIcon = $(this).find("i.bi-plus");
     var $minusIcon = $(this).find("i.bi-dash-lg");
@@ -58,20 +75,21 @@ $(document).ready(function () {
 
   // Select input ------------------------------------------------------------------------>
   var $selectInput = $("#select-input").find("input");
-  $selectInput.on("keydown keypress", function (event) {
+
+  $(document).on("keydown keypress", "#select-input input", function (event) {
     event.preventDefault();
   });
 
-  $selectInput.on("click", function () {
+  $(document).on("click", "#select-input input", function () {
     $("#select-input").toggleClass("active");
   });
 
-  $(".select-dropdown li").on("mousedown", function () {
+  $(document).on("mousedown", ".select-dropdown li", function () {
     var selectedText = $(this).text();
     $selectInput.val(selectedText);
   });
 
-  $selectInput.on("blur", function () {
+  $(document).on("blur", "#select-input input", function () {
     $("#select-input").removeClass("active");
   });
 
@@ -88,9 +106,10 @@ $(document).ready(function () {
   }
 
   // Call api
-  $(".btn-primary").on("click", function (e) {
+  $(document).on("click", "#submit-form-btn", function (e) {
     e.preventDefault();
 
+    console.log("first");
     // Get data form
     var name = $("#name").val().trim();
     var email = $("#email").val().trim();
@@ -196,18 +215,19 @@ $(document).ready(function () {
     }
   });
 
-  $(".back-home-btn").click(function () {
-    window.location.href = "/";
-  });
-
   // Khi modal đóng, reset form
-  $("#exampleModalCenter").on("hidden.bs.modal", function () {
+  $(document).on("hidden.bs.modal", "#exampleModalCenter", function () {
     $("#modal-form").removeClass("finish");
     resetForm();
   });
 
   // Xử lý sự kiện khi nhấn nút Đóng
-  $(".btn-close").on("click", function () {
+  $(document).on("click", ".btn-close", function () {
     $("#exampleModalCenter").modal("hide");
+  });
+
+  // Back to home button
+  $(document).on("click", ".back-home-btn", function () {
+    window.location.href = "/";
   });
 });
