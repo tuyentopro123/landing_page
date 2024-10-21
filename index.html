@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- magnific popup css link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+
+    <!-- font awesome file link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
+    <!-- bootstrap icon link   -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- bootstrap file link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <title>Responsive Architechture and Interior Design Website Tutorial</title>
+  </head>
+
+  <body>
+    <!-- Modal ------------------------------------------------------------------------------>
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div
+          id="modal-form"
+          class="modal-form modal-content d-flex position-relative"
+        >
+          <button type="button" class="btn-close" aria-label="Close">
+            <i class="bi bi-x"></i>
+          </button>
+          <div class="base-form row d-flex">
+            <div
+              class="modal-info col-12 col-md-4 d-flex flex-column justify-content-center"
+            >
+              <div class="modal-container">
+                <div
+                  class="info-title d-flex justify-content-between align-items-center mb-5"
+                >
+                  <h1
+                    class="title-color text-size-1 text-header-md-4 text-left w-75"
+                  >
+                    Đội ngũ <span class="purple-light">WisPay</span> luôn sẵn
+                    sàng giúp đỡ!
+                  </h1>
+                </div>
+                <div
+                  class="info-contact text-size-4 text-size-md-3 title-color text-left"
+                >
+                  <div>
+                    <img src="assets/icon/contact-ic.svg" alt="" />
+                    <div class="title-color mt-4">
+                      <p>Hotline</p>
+                      <p class="title-color text-size-5">034 806 7138</p>
+                      <p class="text-color text-size-5">
+                        Hoạt động từ Thứ 2 - Chủ nhật | 8:00 - 20:00
+                      </p>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="assets/icon/email-ic.svg" alt="" />
+                    <div class="title-color mt-4">
+                      <p>Email</p>
+                      <p class="title-color text-size-5">business@wispay.io</p>
+                      <p class="text-color text-size-5">
+                        Hoạt động từ 8:00 - 22:00
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-8">
+              <div
+                class="modal-header d-flex flex-column justify-content-start"
+              >
+                <p
+                  class="text-size-4 text-size-md-3 second-color text-uppercase"
+                >
+                  Liên hệ
+                </p>
+                <h1
+                  class="modal-title text-header-5 text-header-md-3"
+                  id="exampleModalLongTitle"
+                >
+                  Chúng ta hãy cùng nói chuyện nhé!
+                </h1>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group form-private">
+                    <div class="form-input">
+                      <div id="custom-input-name">
+                        <input
+                          type="text"
+                          placeholder="Ví dụ: Nguyễn Văn A"
+                          id="name"
+                          required
+                        />
+                        <label for="name"
+                          ><span class="suffix">Nhập </span>Họ tên<span
+                            class="required"
+                            >*</span
+                          ></label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-input">
+                      <div id="custom-input-email">
+                        <input
+                          type="email"
+                          placeholder="Ví dụ: abc@gmail.com"
+                          id="email"
+                          required
+                        />
+                        <label for="email"
+                          ><span class="suffix">Nhập </span>Email<span
+                            class="required"
+                            >*</span
+                          ></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-input">
+                      <div id="custom-input-number">
+                        <input
+                          type="number"
+                          placeholder=""
+                          id="number"
+                          required
+                        />
+                        <label for="number"
+                          ><span class="suffix">Nhập </span>số điện thoại<span
+                            class="required"
+                            >*</span
+                          ></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-input">
+                      <div id="custom-input-business">
+                        <input
+                          type="text"
+                          placeholder=""
+                          id="business"
+                          required
+                        />
+                        <label for="business"
+                          ><span class="suffix">Nhập </span>tên doanh nghiệp/cửa
+                          hàng<span class="required">*</span></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div
+                      id="select-input"
+                      class="form-input select-input position-relative"
+                    >
+                      <div id="custom-input-request">
+                        <input
+                          type="text"
+                          placeholder=""
+                          id="request"
+                          required
+                        />
+                        <label for="name"
+                          >Chọn yêu cầu của bạn<span class="required"
+                            >*</span
+                          ></label
+                        >
+                      </div>
+                      <div class="select-dropdown position-absolute">
+                        <ul>
+                          <li>Hỗ trợ ký thuật</li>
+                          <li>Tư vấn sản phẩm</li>
+                          <li>Phản hồi và góp ý</li>
+                          <li>Khác</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="form-input">
+                      <textarea
+                        placeholder="Để lại cho chúng tôi lời nhắn"
+                        id="description"
+                        name=""
+                        id=""
+                      ></textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Hủy
+                </button>
+                <button type="button" class="btn btn-primary">Gửi</button>
+              </div>
+            </div>
+          </div>
+          <!-- msg success -->
+          <div
+            class="msg-success modal-body d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="text-center">
+              <h1
+                class="text-header-5 text-header-md-2 msg-1 font-weight-bold mb-5"
+              >
+                Cảm ơn bạn đã liên hệ
+              </h1>
+              <p class="text-size-4 text-size-md-2 mb-5 msg-2">
+                Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên hệ bạn trong
+                thời gian sớm nhất.
+              </p>
+              <div class="w-100 d-flex justify-content-center">
+                <button type="button" class="btn back-home-btn">
+                  <p>Quay lại trang chủ</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- header section  --------------------------------------------------------------->
+
+    <header class="header fixed-top">
+      <div class="header-container container">
+        <a href="#" class="logo d-flex align-items-center mr-3">
+          <img src="assets/images/logo.png" alt="" class="mr-3" />
+          <p class="text-center text-size-1 title-color">WisPay</p></a
+        >
+
+        <nav>
+          <ul class="text-size-3">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Về chúng tôi</a></li>
+            <li><a href="#process">Kết nối</a></li>
+            <li><a href="#question">Câu hỏi thường gặp</a></li>
+            <li>
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+                class="btn light"
+              >
+                Liên hệ ngay
+              </button>
+            </li>
+            <li>
+              <div class="language position-relative">
+                <i class="bi bi-globe2"></i>
+                <div class="language-dropdown position-absolute">
+                  <ul>
+                    <li>Tiếng Việt</li>
+                    <li>English (US)</li>
+                    <li>简体中文</li>
+                    <li>繁體中文</li>
+                    <li>한국어</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div id="list-mobile" class="list-button text-size-1">
+          <i class="bi bi-list"></i>
+          <i class="bi bi-x" style="display: none"></i>
+        </div>
+      </div>
+      <div id="header-mobile container" class="header-mobile">
+        <nav>
+          <ul class="text-size-3 d-flex flex-column">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Về chúng tôi</a></li>
+            <li><a href="#process">Kết nối</a></li>
+            <li><a href="#question">Câu hỏi thường gặp</a></li>
+            <li>
+              <div id="language-mobile" class="language position-relative">
+                <div
+                  class="d-flex justify-content-center align-items-center p-4"
+                >
+                  <i class="bi bi-globe2"></i>
+                  <p></p>
+                  <i class="bi bi-chevron-down"></i>
+                  <i class="bi bi-chevron-up" style="display: none"></i>
+                </div>
+                <div class="language-dropdown position-absolute">
+                  <ul>
+                    <li>Tiếng Việt</li>
+                    <li>English (US)</li>
+                    <li>简体中文</li>
+                    <li>繁體中文</li>
+                    <li>한국어</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#exampleModalCenter"
+                class="btn"
+              >
+                Liên hệ ngay
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- home section starts ----------------------------------------------------------->
+    <section id="home" class="home mt-10 container">
+      <div class="row hero gy-5 mt-8 justify-content-start">
+        <div
+          class="col-xl-6 col-12 pl-3 d-flex flex-column justify-content-start"
+        >
+          <div class="tag-note d-flex align-items-center px-4 text-size-4">
+            <img src="assets/images/logo.png" alt="" class="mr-3 h-50" />
+            <p>Giải pháp kỹ thuật số toàn diện</p>
+          </div>
+          <div class="my-4">
+            <h1
+              class="text-left text-header-4 text-header-xl-1 title-color font-weight-bold"
+            >
+              Thanh toán dễ dàng
+            </h1>
+            <h1
+              class="text-left text-header-4 text-header-xl-1 title-color font-weight-bold"
+            >
+              Kinh doanh thuận lợi
+            </h1>
+            <p class="text-size-3 text-color">
+              Kết nối mọi phương thức thanh toán chỉ với một lần kết hợp
+            </p>
+          </div>
+          <div>
+            <button class="btn" type="button">
+              <p>Bắt đầu với Wispay</p>
+              <div>
+                <i class="bi bi-arrow-right"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="col-xl-6 col-12 pl-3 d-flex">
+          <img src="assets/images/flow-hero.svg" alt="" class="w-100" />
+        </div>
+      </div>
+    </section>
+
+    <!-- about section starts  --------------------------------------------------------->
+    <section id="about" class="about container">
+      <div class="about-preview">
+        <h1
+          class="text-start font-weight-bold title-color text-header-3 text-header-xl-1"
+        >
+          Về chúng tôi
+        </h1>
+        <div class="row">
+          <div
+            class="col-12 col-md-8 text-size-4 text-size-xl-2 text-color mt-5"
+          >
+            <p>
+              WisPay cung cấp nền tảng thanh toán an toàn, hiệu quả, giúp đơn
+              giản hóa quy trình thanh toán cho doanh nghiệp. Sứ mệnh của chúng
+              tôi là tối ưu hóa giao dịch, tăng cường tính minh bạch, giảm chi
+              phí và đẩy nhanh chu kỳ thanh toán. Với dịch vụ xuất sắc và giải
+              pháp tích hợp dễ dàng, chúng tôi cam kết mang lại hiệu quả tài
+              chính và thành công cho doanh nghiệp trong thị trường cạnh tranh
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="align-items-center">
+        <div class="row gy-5 mb-5">
+          <div class="col-12 col-md-6">
+            <div class="card" style="background-color: rgba(233, 236, 241, 1)">
+              <div class="about-content d-flex flex-column">
+                <img src="assets/icon/icon-card-1.png" alt="" />
+                <h2 class="text-header-5 text-header-xl-3 primary-color">
+                  Quản lý đơn hàng dễ dàng
+                </h2>
+                <p class="text-size-4 text-size-xl-3 text-black-color">
+                  Cập nhật trạng thái đơn hàng theo thời gian thực, dễ dàng theo
+                  dõi và kiểm soát chi tiết mọi giai đoạn của quá trình mua
+                  hàng, từ lúc khách hàng đặt hàng cho đến khi đơn hàng được
+                  giao.
+                </p>
+              </div>
+              <div
+                class="about-thumbnail"
+                style="background-image: url(../assets/images/about-card-1.svg)"
+              >
+                <img src="assets/images/about-sider-1.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div
+              class="card h-100"
+              style="background-color: rgba(61, 33, 152, 1)"
+            >
+              <div class="about-content purple d-flex flex-column">
+                <img src="assets/icon/icon-card-2.png" alt="" />
+                <h2 class="text-header-5 text-header-xl-3 title-color">
+                  Giao dịch minh bạch, chính xác
+                </h2>
+                <p class="text-size-4 text-size-xl-3 text-color">
+                  WisPay giúp bạn theo dõi tất cả các giao dịch chi tiết và an
+                  toàn, nhanh chóng biết được trạng thái giao dịch, kịp thời
+                  giải quyết vấn đề đảm bảo mọi giao dịch diễn ra suôn sẻ và
+                  khách hàng luôn hài lòng.
+                </p>
+              </div>
+              <div
+                class="about-thumbnail purple flex-1"
+                style="
+                  background-image: url(../assets/images/about-card-2.svg);
+                  margin-left: 7rem;
+                "
+              >
+                <div class="position-relative" style="top: -3rem; left: -3rem">
+                  <img src="assets/images/about-sider-2.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="card h-100 bg-pink">
+              <div class="about-content card-3 d-flex flex-column">
+                <h2 class="text-header-5 text-header-xl-3 primary-color">
+                  Cấu hình thanh toán nhanh chóng, tiện lợi
+                </h2>
+                <p class="text-size-4 text-size-xl-3 primary-color">
+                  Chỉ cần một kết nối duy nhất với WisPay là có thể tích hợp tất
+                  cả các phương thức thanh toán bạn mong muốn, từ ví điện tử đến
+                  chuyển khoản ngân hàng. Cấu hình đơn giản, nhanh chóng, tiết
+                  kiệm thời gian và công sức.
+                </p>
+              </div>
+              <div class="about-thumbnail d-flex">
+                <img
+                  src="assets/images/about-card-3.svg"
+                  alt=""
+                  class="card-3"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- process section starts  ------------------------------------------------------->
+    <section id="process" class="process container">
+      <div class="process-preview">
+        <h1
+          class="text-start font-weight-bold title-color text-header-4 text-header-md-1"
+        >
+          Triển khai dễ dàng với 03 bước
+        </h1>
+      </div>
+
+      <div class="process-container">
+        <div class="row flex-grow-1">
+          <div class="col-md-3 col-12">
+            <div class="d-flex flex-column text-size-3 align-items-center">
+              <div class="step-round mb-3">
+                <div class="step-content text-header-md-5"><span>1</span></div>
+              </div>
+              <p class="text-header-md-4 text-center text-color">
+                Đăng ký tài khoản WisPay
+              </p>
+            </div>
+          </div>
+          <div class="col-md-1 col-12">
+            <div class="step-solid h-100"></div>
+          </div>
+          <div class="col-md-3 col-12">
+            <div class="d-flex flex-column text-size-3 align-items-center">
+              <div class="step-round mb-3">
+                <div class="step-content text-header-md-5"><span>2</span></div>
+              </div>
+              <p class="text-header-md-4 text-center text-color">
+                Cấu hình phương thức thanh toán
+              </p>
+            </div>
+          </div>
+          <div class="col-md-1 col-12">
+            <div class="step-solid h-100"></div>
+          </div>
+          <div class="col-md-3 col-12">
+            <div class="d-flex flex-column text-size-3 align-items-center">
+              <div class="step-round mb-3">
+                <div class="step-content text-header-md-5"><span>3</span></div>
+              </div>
+              <p class="text-header-md-4 text-center text-color">
+                Trải nghiệm WisPay
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="process-brand d-flex">
+          <div class="row">
+            <div class="col-12 col-md-4 p-4">
+              <p class="text-size-3 text-size-md-2 text-color w-75 text-left">
+                Hỗ trợ kết nối nhiều cổng thanh toán và ví điện tử
+              </p>
+            </div>
+            <div class="col-12 col-md-8">
+              <div class="d-flex justify-content-between flex-grow-1">
+                <div>
+                  <img src="assets/icon/shoppePay.png" alt="" />
+                </div>
+                <div>
+                  <img src="assets/icon/momo.png" alt="" />
+                </div>
+                <div>
+                  <img src="assets/icon/zalopay.png" alt="" />
+                </div>
+                <div>
+                  <img src="assets/icon/vnpay.png" alt="" />
+                </div>
+                <div>
+                  <img src="assets/icon/payoo.png" alt="" />
+                </div>
+                <div>
+                  <img src="assets/icon/asiapay.png" alt="" />
+                </div>
+                <div>
+                  <img src="assets/icon/onepay.png" alt="" />
+                </div>
+                <div>
+                  <img src="assets/icon/acb.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- service section starts   ------------------------------------------------------>
+    <section id="service" class="service container">
+      <div class="process-preview">
+        <h1
+          class="text-start font-weight-bold title-color text-header-4 text-header-md-1"
+        >
+          Đăng ký sử dụng dịch vụ WisPay
+        </h1>
+      </div>
+
+      <div class="service-container position-relative">
+        <div class="row">
+          <div class="col-12 col-md-6 text-size-4 text-header-xl-5">
+            <div class="tag-note d-flex align-items-center p-4">
+              <img src="assets/images/logo.png" alt="" class="mr-4" />
+              <p>Chọn đăng ký doanh nghiệp</p>
+            </div>
+            <div class="tag-note d-flex align-items-center p-4">
+              <img src="assets/images/logo.png" alt="" class="mr-4" />
+              <p>Điền đầy đủ các thông tin để đăng ký</p>
+            </div>
+            <div class="tag-note d-flex align-items-center p-4">
+              <img src="assets/images/logo.png" alt="" class="mr-4" />
+              <p>
+                Sau khi hoàn tất đăng ký, chúng tôi sẽ liên hệ với bạn trong
+                thời gian ngắn nhất
+              </p>
+            </div>
+          </div>
+          <div class="service-thumbnail col-12 col-md-6">
+            <img src="assets/images/service-bg.png" alt="" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- feedback section starts  ------------------------------------------------------>
+    <section id="feedback" class="feedback container">
+      <div class="feedback-preview">
+        <h1
+          class="text-start font-weight-bold title-color text-header-4 text-header-md-1"
+        >
+          Khách hàng nói gì về chúng tôi?
+        </h1>
+      </div>
+
+      <div class="feedback-container">
+        <div class="row gy-5 mb-5">
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <img
+                src="assets/icon/quote-mark-purple.png"
+                alt=""
+                class="mb-5"
+              />
+              <p class="text-size-4 text-size-md-2 primary-color">
+                Sử dụng WisPay là một quyết định sáng suốt cho doanh nghiệp của
+                chúng tôi. Hệ thống tự động cập nhật giao dịch giúp chúng tôi
+                tiết kiệm thời gian và công sức. Nhân viên của chúng tôi không
+                còn phải lo lắng về việc kiểm tra thủ công nữa.
+              </p>
+              <div class="feedback-user mt-5 d-flex">
+                <img
+                  src="assets/images/avatar-feedback.png"
+                  alt=""
+                  class="mr-4"
+                />
+                <div class="text-size-3 primary-color">
+                  <h3>Mr. Khoa Bùi</h3>
+                  <p>CEO, Công ty TNHH Thương mại dịch vụ Khoa Phát</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex align-items-end">
+            <div class="card purple">
+              <img src="assets/icon/quote-mark-white.png" alt="" class="mb-5" />
+              <p class="text-size-4 text-size-md-2 text-color">
+                Tôi rất hài lòng với tính năng cấu hình phương thức thanh toán
+                của WisPay. Chỉ mất vài phút, chúng tôi đã có thể kết nối với
+                nhiều ngân hàng và ví điện tử, giúp khách hàng dễ dàng thanh
+                toán hơn
+              </p>
+              <div class="feedback-user mt-5 d-flex">
+                <img
+                  src="assets/images/avatar-feedback.png"
+                  alt=""
+                  class="mr-4"
+                />
+                <div class="text-size-3 title-color">
+                  <h3>Hà Linh</h3>
+                  <p class="text-color">
+                    Giám đốc, Công ty TNHH Dịch vụ Hà Linh
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 d-flex align-items-end">
+            <div class="card">
+              <img
+                src="assets/icon/quote-mark-purple.png"
+                alt=""
+                class="mb-5"
+              />
+              <p class="text-size-4 text-size-md-2 primary-color">
+                WisPay là một giải pháp tuyệt vời cho doanh nghiệp nhỏ như chúng
+                tôi. Tích hợp nhanh chóng, chi phí hợp lý và hỗ trợ nhiệt tình.
+                Tôi rất hài lòng với dịch vụ của WisPay.
+              </p>
+              <div class="feedback-user mt-5 d-flex">
+                <img
+                  src="assets/images/avatar-feedback.png"
+                  alt=""
+                  class="mr-4"
+                />
+                <div class="text-size-3 primary-color">
+                  <h3>Chị Ngọc Ánh</h3>
+                  <p>Chủ cửa hàng, Ngọc Ánh Boutique</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feedback-brand d-flex justify-content-between">
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div>
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div class="logo-tablet">
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div class="logo-tablet">
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+          <div class="logo-tablet">
+            <img src="assets/icon/logo-empty.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- question section starts  ------------------------------------------------------>
+    <section id="question" class="question container">
+      <div class="question-preview">
+        <h1
+          class="text-start font-weight-bold title-color text-header-4 text-header-md-1"
+        >
+          Câu hỏi thường gặp
+        </h1>
+      </div>
+
+      <div class="question-container">
+        <div class="question-card">
+          <div
+            class="text-size-2 text-header-md-4 d-flex justify-content-between"
+          >
+            <h2>WisPay hỗ trợ những phương thức thanh toán nào?</h2>
+            <i class="bi bi-plus"></i>
+            <i class="bi bi-dash-lg" style="display: none"></i>
+          </div>
+          <p class="text-size-4 text-size-md-1">
+            We charge fees to providers for using our services and our pricing
+            tiers are based on payment volumes. Please get in touch with our
+            team to receive a bespoke pricing proposal.
+          </p>
+        </div>
+        <div class="question-card">
+          <div
+            class="text-size-2 text-header-md-4 d-flex justify-content-between"
+          >
+            <h2>
+              Giải pháp của bạn có giúp tôi tiết kiệm chi phí vận hành không?
+            </h2>
+            <i class="bi bi-plus"></i>
+            <i class="bi bi-dash-lg" style="display: none"></i>
+          </div>
+          <p class="text-size-4 text-size-md-1">
+            We charge fees to providers for using our services and our pricing
+            tiers are based on payment volumes. Please get in touch with our
+            team to receive a bespoke pricing proposal.
+          </p>
+        </div>
+        <div class="question-card">
+          <div
+            class="text-size-2 text-header-md-4 d-flex justify-content-between"
+          >
+            <h2>Dữ liệu giao dịch của tôi có được bảo mật không?</h2>
+            <i class="bi bi-plus"></i>
+            <i class="bi bi-dash-lg" style="display: none"></i>
+          </div>
+          <p class="text-size-4 text-size-md-1">
+            We charge fees to providers for using our services and our pricing
+            tiers are based on payment volumes. Please get in touch with our
+            team to receive a bespoke pricing proposal.
+          </p>
+        </div>
+        <div class="question-card">
+          <div
+            class="text-size-2 text-header-md-4 d-flex justify-content-between"
+          >
+            <h2>
+              Nếu tôi gặp sự cố trong quá trình sử dụng, tôi có thể liên hệ với
+              ai?
+            </h2>
+            <i class="bi bi-plus"></i>
+            <i class="bi bi-dash-lg" style="display: none"></i>
+          </div>
+          <p class="text-size-4 text-size-md-1">
+            We charge fees to providers for using our services and our pricing
+            tiers are based on payment volumes. Please get in touch with our
+            team to receive a bespoke pricing proposal.
+          </p>
+        </div>
+        <div class="question-card">
+          <div
+            class="text-size-2 text-header-md-4 d-flex justify-content-between"
+          >
+            <h2>
+              Làm thế nào để tích hợp giải pháp thanh toán của bạn vào website
+              của tôi?
+            </h2>
+            <i class="bi bi-plus"></i>
+            <i class="bi bi-dash-lg" style="display: none"></i>
+          </div>
+          <p class="text-size-4 text-size-md-1">
+            We charge fees to providers for using our services and our pricing
+            tiers are based on payment volumes. Please get in touch with our
+            team to receive a bespoke pricing proposal. We charge fees to
+            providers for using our services and our pricing tiers are based on
+            payment volumes. Please get in touch with our team to receive a
+            bespoke pricing proposal. We charge fees to providers for using our
+            services and our pricing tiers are based on payment volumes. Please
+            get in touch with our team to receive a bespoke pricing proposal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section starts  -------------------------------------------------------->
+    <section class="footer">
+      <div class="footer-container">
+        <div
+          class="footer-title d-flex justify-content-between align-items-center"
+        >
+          <p class="title-color text-header-5 text-header-md-2 text-left">
+            Hãy để <span class="purple-light">WisPay</span> đồng hành cùng bạn
+            trên con đường phát triển và thành công
+          </p>
+          <button class="btn">
+            <p>Liên hệ chúng tôi</p>
+            <div>
+              <i class="bi bi-arrow-right"></i>
+            </div>
+          </button>
+        </div>
+        <div class="footer-info text-size-3 text-color text-left mb-5">
+          <p>MST: 0318244600</p>
+          <p>
+            Địa chỉ: Số 79, đường B4, Khu đô thị Sala, An Lợi Đông, Thủ Đức, Hồ
+            Chí Minh, Việt Nam.
+          </p>
+          <p>Email: business@wispay.com</p>
+        </div>
+        <div
+          class="footer-credit d-flex justify-content-between align-items-center"
+        >
+          <div
+            class="footer-sign d-flex justify-content-start align-items-center"
+          >
+            <a href="#" class="logo d-flex align-items-center mr-3">
+              <img src="assets/images/logo.png" alt="" class="mr-3" />
+              <p class="text-center text-size-3 text-size-md-1 title-color">
+                WisPay
+              </p></a
+            >
+            <p class="text-center text-size-3 text-color">
+              Copyright © 2023 WisPay. All rights reserved.
+            </p>
+          </div>
+          <div
+            class="footer-social d-flex text-header-4 justify-content-between align-items-center"
+            style="width: 10%"
+          >
+            <div class="social">
+              <img src="assets/icon/IN.svg" alt="" />
+            </div>
+            <div class="social">
+              <img src="assets/icon/YTB.svg" alt="" />
+            </div>
+            <div class="social">
+              <img src="assets/icon/FB.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- jquery file link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- magnific popup link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <!-- main/custom javascript file link  -->
+    <script src="js/main.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
