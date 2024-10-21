@@ -52,8 +52,10 @@ $(document).ready(function () {
 
   $(document).on("click", ".language-dropdown li", function (e) {
     var selectedLanguage = $(this).text();
-    $("#language-mobile").find("p").text(selectedLanguage);
-    $(".language-dropdown").hide();
+    if ($(window).width() < 768) {
+      $("#language-mobile").find("p").text(selectedLanguage);
+      $(".language-dropdown").hide();
+    }
   });
 
   // question ----------------------------------------------------------------------------------->
@@ -74,8 +76,6 @@ $(document).ready(function () {
   });
 
   // Select input ------------------------------------------------------------------------>
-  var $selectInput = $("#select-input").find("input");
-
   $(document).on("keydown keypress", "#select-input input", function (event) {
     event.preventDefault();
   });
@@ -86,6 +86,7 @@ $(document).ready(function () {
 
   $(document).on("mousedown", ".select-dropdown li", function () {
     var selectedText = $(this).text();
+    var $selectInput = $("#select-input").find("#request");
     $selectInput.val(selectedText);
   });
 
@@ -170,13 +171,6 @@ $(document).ready(function () {
       isValid = false;
     }
 
-    //  test finish --------------->
-    // $("#modal-form").addClass("finish");
-    // $(".msg-success .msg-1").text("Cảm ơn bạn đã liên hệ!");
-    // $(".msg-success .msg-2").text(
-    //   "Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên hệ bạn trong thời gian sớm nhất."
-    // );
-
     // Validate true
     if (isValid) {
       var data = {
@@ -188,30 +182,36 @@ $(document).ready(function () {
         description: description ?? "",
       };
 
+      //  test finish --------------->
+      $("#modal-form").addClass("finish");
+      $(".msg-success .msg-1").text("Cảm ơn bạn đã liên hệ!");
+      $(".msg-success .msg-2").text(
+        "Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên hệ bạn trong thời gian sớm nhất."
+      );
       // Gọi API bằng AJAX
-      $.ajax({
-        url: "YOUR_API_ENDPOINT", // CUSTOM URL
-        type: "POST",
-        contentType: "application/json",
-        data: JSON.stringify(data),
-        success: function (response) {
-          resetForm();
-          console.log("Success:", response);
-          $("#modal-form").addClass("finish");
-          $(".msg-success .msg-1").text("Cảm ơn bạn đã liên hệ!");
-          $(".msg-success .msg-2").text(
-            "Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên hệ bạn trong thời gian sớm nhất."
-          );
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-          console.error("Error:", textStatus, errorThrown);
-          $("#modal-form").addClass("finish");
-          $(".msg-success .msg-1").text("Đang thực hiện bảo trì");
-          $(".msg-success .msg-2").text(
-            "Xin lỗi vì sự bất tiện, vui lòng thử lại sau"
-          );
-        },
-      });
+      // $.ajax({
+      //   url: "YOUR_API_ENDPOINT", // CUSTOM URL
+      //   type: "POST",
+      //   contentType: "application/json",
+      //   data: JSON.stringify(data),
+      //   success: function (response) {
+      //     resetForm();
+      //     console.log("Success:", response);
+      //     $("#modal-form").addClass("finish");
+      //     $(".msg-success .msg-1").text("Cảm ơn bạn đã liên hệ!");
+      //     $(".msg-success .msg-2").text(
+      //       "Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên hệ bạn trong thời gian sớm nhất."
+      //     );
+      //   },
+      //   error: function (jqXHR, textStatus, errorThrown) {
+      //     console.error("Error:", textStatus, errorThrown);
+      //     $("#modal-form").addClass("finish");
+      //     $(".msg-success .msg-1").text("Đang thực hiện bảo trì");
+      //     $(".msg-success .msg-2").text(
+      //       "Xin lỗi vì sự bất tiện, vui lòng thử lại sau"
+      //     );
+      //   },
+      // });
     }
   });
 
